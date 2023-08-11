@@ -7,7 +7,7 @@ export default function AppHeader({}: Props) {
   // output
   return (
     <header>
-      <span>Logo</span>
+      <span>Juan Gomez</span>
 
       <MainNav />
     </header>

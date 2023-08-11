@@ -1,19 +1,35 @@
 import { Outlet } from "react-router";
 import AppHeader from "../header/AppHeader";
 import AppFooter from "../footer/AppFooter";
+import styled from "@emotion/styled";
 
-type Props = {};
+const Main = styled.main`
+  text-align: center;
+  margin: 1.6rem;
+  min-width: 34.3rem;
+
+  @media (min-width: 48em) {
+    text-align: left;
+    margin: 3rem;
+  }
+
+  @media (min-width: 90em) {
+    margin: 4rem auto;
+    max-width: 111rem;
+  }
+  /* max-width: 34.4rem; */
+`;
 
 //* COMPONENT: AppLayout
-export default function AppLayout({}: Props) {
+export default function AppLayout() {
   // output
   return (
-    <main>
+    <Main>
       <AppHeader />
 
       <Outlet />
 
       <AppFooter />
-    </main>
+    </Main>
   );
 }
