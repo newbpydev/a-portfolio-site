@@ -1,4 +1,5 @@
 import MainNav from "../navbar/MainNav";
+import SocialNav from "../navbar/SocialNav";
 
 type Props = {};
 
@@ -7,7 +8,9 @@ export default function AppHeader({}: Props) {
   // output
   return (
     <header>
-      <span>Juan Gomez</span>
+      <span>juangomez</span>
+
+      <SocialNav />
 
       <MainNav />
     </header>
