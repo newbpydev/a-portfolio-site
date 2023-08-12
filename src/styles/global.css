@@ -1,0 +1,68 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+
+
+:root {
+  --color-black-0: #000000;
+  --color-black-50: #0a0a0a;
+  --color-black-100: #0b0b0b;
+  --color-black-200: #101010;
+  --color-black-400: #141414;
+  --color-black-500: #151515;
+  --color-black-600: #1a1a1a;
+  --color-black-700: #1f1f1f;
+  --color-black-800: #242424;
+  --color-black-900: #2e2e2e;
+  --color-green-0: #1a4638;
+  --color-green-50: #277653;
+  --color-green-100: #348a6e;
+  --color-green-200: #3cb381;
+  --color-green-400: #47d095;
+  --color-green-500: #4EE1A0;
+  --color-green-600: #65e9b0;
+  --color-green-700: #7cf1c0;
+  --color-green-800: #92f9d0;
+  --color-green-900: #a8ffe0;
+  --color-graydark-0: #101010;
+  --color-graydark-50: #181818;
+  --color-graydark-100: #1f1f1f;
+  --color-graydark-200: #262626;
+  --color-graydark-400: #2d2d2d;
+  --color-graydark-500: #242424;
+  --color-graydark-600: #3a3a3a;
+  --color-graydark-700: #515151;
+  --color-graydark-800: #686868;
+  --color-graydark-900: #7f7f7f;
+  --color-graylight-0: #ffffff;
+  --color-graylight-50: #f2f2f2;
+  --color-graylight-100: #e6e6e6;
+  --color-graylight-200: #dbdbdb;
+  --color-graylight-400: #d5d5d5;
+  --color-graylight-500: #D9D9D9;
+  --color-graylight-600: #c3c3c3;
+  --color-graylight-700: #adadad;
+  --color-graylight-800: #979797;
+  --color-graylight-900: #818181;
+
+  --color-primary: var(--color-green-500);
+  --color-error: #ff6f5b;
+
+  --text-base: 1.8rem;
+  --text-m: 2.4rem;
+  --text-l: 4.8rem;
+  --text-xl: 8.8rem;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--color-graylight-500);
+
+  background-color: var(--color-black-500);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
