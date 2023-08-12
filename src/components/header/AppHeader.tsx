@@ -1,5 +1,11 @@
+import styled from "@emotion/styled";
 import MainNav from "../navbar/MainNav";
 import SocialNav from "../navbar/SocialNav";
+
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: row;
+`;
 
 type Props = {};
 
@@ -7,12 +13,12 @@ type Props = {};
 export default function AppHeader({}: Props) {
   // output
   return (
-    <header>
+    <StyledHeader>
       <span>juangomez</span>
 
       <SocialNav />
 
       <MainNav />
-    </header>
+    </StyledHeader>
   );
 }

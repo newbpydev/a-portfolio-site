@@ -1,7 +1,29 @@
 import gitHub from "../../assets/images/icon-github.svg";
+// import { ReactComponent as Logo } from "../../assets/images/icon-github.svg";
 import fronendMentor from "../../assets/images/icon-frontend-mentor.svg";
 import linkedIn from "../../assets/images/icon-linkedin.svg";
 import twitter from "../../assets/images/icon-twitter.svg";
+import styled from "@emotion/styled";
+import SocialIcon from "../ui/social/SocialIcon";
+
+const StyledSocialDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 15.4rem;
+
+  & svg {
+    fill: var(--color-graylight-0);
+    transition: fill 0.2s ease-in-out;
+
+    &:hover {
+      fill: var(--color-graylight-400);
+    }
+  }
+
+  /* height: 2rem; */
+`;
 
 type Props = {};
 
@@ -9,13 +31,13 @@ type Props = {};
 export default function SocialNav({}: Props) {
   // output
   return (
-    <div>
+    <StyledSocialDiv>
       <a href="http://" target="_blank" rel="noopener noreferrer">
-        <img src={gitHub} alt="GitHub Icon" />
+        <SocialIcon media="github" />
       </a>
 
       <a href="http://" target="_blank" rel="noopener noreferrer">
-        <img src={fronendMentor} alt="Frontend Mentor Icon" />
+        <SocialIcon media="frontend-mentor" />
       </a>
 
       <a
@@ -23,7 +45,7 @@ export default function SocialNav({}: Props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={linkedIn} alt="LinkedIn Icon" />
+        <SocialIcon media="linkedin" />
       </a>
 
       <a
@@ -31,8 +53,8 @@ export default function SocialNav({}: Props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={twitter} alt="Twitter Icon" />
+        <SocialIcon media="twitter" />
       </a>
-    </div>
+    </StyledSocialDiv>
   );
 }
