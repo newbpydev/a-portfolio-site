@@ -1,8 +1,3 @@
-import gitHub from "../../assets/images/icon-github.svg";
-// import { ReactComponent as Logo } from "../../assets/images/icon-github.svg";
-import fronendMentor from "../../assets/images/icon-frontend-mentor.svg";
-import linkedIn from "../../assets/images/icon-linkedin.svg";
-import twitter from "../../assets/images/icon-twitter.svg";
 import styled from "@emotion/styled";
 import SocialIcon from "../ui/social/SocialIcon";
 
@@ -12,8 +7,14 @@ const StyledSocialDiv = styled.div`
   justify-content: space-between;
 
   min-width: 15.4rem;
+  min-height: 2rem;
+
+  & a {
+  }
 
   & svg {
+    display: block;
+
     fill: var(--color-graylight-0);
     transition: fill 0.2s ease-in-out;
 
@@ -25,18 +26,26 @@ const StyledSocialDiv = styled.div`
   /* height: 2rem; */
 `;
 
-type Props = {};
-
 //* COMPONENT: SocialNav
-export default function SocialNav({}: Props) {
+export default function SocialNav() {
   // output
   return (
     <StyledSocialDiv>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
+      <a
+        href="http://"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to GitHub"
+      >
         <SocialIcon media="github" />
       </a>
 
-      <a href="http://" target="_blank" rel="noopener noreferrer">
+      <a
+        href="http://"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to Fronend Mentor"
+      >
         <SocialIcon media="frontend-mentor" />
       </a>
 
@@ -44,6 +53,7 @@ export default function SocialNav({}: Props) {
         href="https://www.linkedin.com/in/juan-gomez-8b05575b/"
         target="_blank"
         rel="noopener noreferrer"
+        title="Link to LinkedIn"
       >
         <SocialIcon media="linkedin" />
       </a>
@@ -52,6 +62,7 @@ export default function SocialNav({}: Props) {
         href="https://twitter.com/Newb_PyDev"
         target="_blank"
         rel="noopener noreferrer"
+        title="Link to Twitter"
       >
         <SocialIcon media="twitter" />
       </a>
