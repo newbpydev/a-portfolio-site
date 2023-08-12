@@ -1,4 +1,10 @@
+import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
+
+const NavMenuUl = styled.ul`
+  display: flex;
+  flex-direction: row;
+`;
 
 type Props = {};
 
@@ -7,7 +13,7 @@ export default function MainNav({}: Props) {
   // output
   return (
     <nav>
-      <ul>
+      <NavMenuUl>
         <li>
           <NavLink to={"/"}>Home</NavLink>
         </li>
@@ -20,7 +26,7 @@ export default function MainNav({}: Props) {
         <li>
           <NavLink to={"/about"}>About</NavLink>
         </li>
-      </ul>
+      </NavMenuUl>
     </nav>
   );
 }
