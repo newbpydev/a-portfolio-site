@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 const NavMenuUl = styled.ul`
   display: flex;
   flex-direction: row;
+  gap: 2rem;
 `;
 
 type Props = {};
@@ -13,7 +14,7 @@ export default function MainNav({}: Props) {
   // output
   return (
     <nav>
-      <NavMenuUl>
+      <NavMenuUl as="ul">
         <li>
           <NavLink to={"/"}>Home</NavLink>
         </li>
