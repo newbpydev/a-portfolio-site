@@ -6,7 +6,14 @@ const HeroSection = styled.section`
   background-color: gray;
 `;
 
-const SkillsSection = styled.section``;
+const SkillsSection = styled.section`
+  padding: 4rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-top: 1px solid var(--color-graylight-0);
+  border-bottom: 1px solid var(--color-graylight-0);
+`;
 
 const ProjectsSection = styled.section`
   background-color: pink;

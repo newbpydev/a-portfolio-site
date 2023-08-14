@@ -13,10 +13,10 @@ export function ExperienceTime(dateStr: string) {
   const daysDifference = Math.floor(timeDifferenceDays % 30);
 
   const yearOutput = yearsDifference
-    ? `${yearsDifference} Year${yearsDifference > 1 ? "s" : ""}`
+    ? `${yearsDifference} Yr${yearsDifference > 1 ? "s" : ""}`
     : "";
   const monthOutput = monthsDifference
-    ? `${monthsDifference} Month${monthsDifference > 1 ? "s" : ""}`
+    ? `${monthsDifference} Mo${monthsDifference > 1 ? "s" : ""}`
     : "";
 
   const output = yearsDifference

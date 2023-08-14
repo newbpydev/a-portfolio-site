@@ -3,9 +3,23 @@ import skillsData from "../,,/../../data/skills.json";
 import { ExperienceTime } from "../../services/dates/experienceTime";
 import { Skill } from "../../types/data.skills";
 
-const StyledHeading = styled.h3`
-  font-size: var(--text-sm);
+const StyledSkillItem = styled.div`
+  & h3 {
+    color: var(--color-graylight-0);
+    font-weight: 700;
+    font-size: 3.2rem;
+    letter-spacing: -1px;
+    line-height: 4rem;
+  }
+
+  & p {
+    font-size: var(----text-sm);
+    line-height: 2.6rem;
+  }
 `;
+
+// const StyledHeading = styled.h3`
+// `;
 
 //* COMPONENT: SkillsList
 export default function SkillsList() {
@@ -13,25 +27,16 @@ export default function SkillsList() {
 
   // output
   return (
-    <div>
+    <>
       {skills.map((skill) => {
         const experienceStr = ExperienceTime(skill.experience);
-        // const startingDate = new Date(skill.experience);
-        // const currentDate = new Date();
-        // const timeDifferenceMs = currentDate - startingDate;
-
-        // const timeDifferenceDays = Math.floor(
-        //   timeDifferenceMs / (1000 * 60 * 60 * 24)
-        // );
-        // console.log(timeDifferenceDays);
-
         return (
-          <div key={skill.id}>
-            <StyledHeading>{skill.name}</StyledHeading>
+          <StyledSkillItem key={skill.id}>
+            <h3>{skill.name}</h3>
             <p>{experienceStr}</p>
-          </div>
+          </StyledSkillItem>
         );
       })}
-    </div>
+    </>
   );
 }
