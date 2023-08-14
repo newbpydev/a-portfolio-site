@@ -1,13 +1,12 @@
 import styled from "@emotion/styled";
 import Button from "../components/buttons/Button";
+import SkillsList from "../components/sections/SkillsList";
 
 const HeroSection = styled.section`
   background-color: gray;
 `;
 
-const SkillsSection = styled.section`
-  background-color: yellow;
-`;
+const SkillsSection = styled.section``;
 
 const ProjectsSection = styled.section`
   background-color: pink;
@@ -41,7 +40,9 @@ export default function HomePage() {
         <Button>Contact Me</Button>
       </HeroSection>
 
-      <SkillsSection>Skills</SkillsSection>
+      <SkillsSection>
+        <SkillsList />
+      </SkillsSection>
 
       <ProjectsSection>Projects</ProjectsSection>
 

@@ -47,6 +47,7 @@
   --color-primary: var(--color-green-500);
   --color-error: #ff6f5b;
 
+  --text-sm: 1.6rem;
   --text-base: 1.8rem;
   --text-m: 2.4rem;
   --text-l: 4.8rem;
