@@ -44,7 +44,7 @@ export default function SocialNav() {
         href="http://"
         target="_blank"
         rel="noopener noreferrer"
-        title="Link to Fronend Mentor"
+        title="Link to Frontend Mentor"
       >
         <SocialIcon media="frontend-mentor" />
       </a>
