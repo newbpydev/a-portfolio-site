@@ -3,7 +3,25 @@ import Button from "../components/buttons/Button";
 import SkillsList from "../components/sections/SkillsList";
 
 const HeroSection = styled.section`
-  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  & h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-graylight-0);
+    line-height: 4rem;
+    letter-spacing: -1.136px;
+
+    & span {
+      display: inline-block;
+      border-bottom: 4px solid var(--color-green-500);
+      /* margin-bottom: 1rem; */
+      /* line-height: -3rem; */
+      /* border-bottom- */
+    }
+  }
 `;
 
 const SkillsSection = styled.section`

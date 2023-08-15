@@ -10,7 +10,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  width: 15.4rem;
+  /* width: 15.4rem; */
 `;
 
 type Props = {};
