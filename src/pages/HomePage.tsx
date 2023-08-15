@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Button from "../components/buttons/Button";
 import SkillsList from "../components/sections/SkillsList";
+import ProjectsList from "../components/sections/ProjectsList";
 
 const HeroSection = styled.section`
   display: flex;
@@ -33,9 +34,7 @@ const SkillsSection = styled.section`
   border-bottom: 1px solid var(--color-graylight-0);
 `;
 
-const ProjectsSection = styled.section`
-  background-color: pink;
-`;
+const ProjectsSection = styled.section``;
 
 const BlogsSection = styled.section`
   background-color: lightsalmon;
@@ -50,6 +49,7 @@ export default function HomePage() {
   // output
   return (
     <>
+      {/* Hero Section */}
       <HeroSection>
         <h1>
           Nice to meet you! I'm <span>Juan Gomez</span>.
@@ -65,14 +65,22 @@ export default function HomePage() {
         <Button>Contact Me</Button>
       </HeroSection>
 
+      {/* Skills Section */}
       <SkillsSection>
         <SkillsList />
       </SkillsSection>
 
-      <ProjectsSection>Projects</ProjectsSection>
+      {/* Projects Section */}
+      <ProjectsSection>
+        <h2>Projects</h2>
+        <Button>Contact Me</Button>
+        <ProjectsList />
+      </ProjectsSection>
 
+      {/* Blogs Section */}
       <BlogsSection>Blogs</BlogsSection>
 
+      {/* Contact Section */}
       <ContactSection>Contact</ContactSection>
     </>
   );
