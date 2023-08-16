@@ -9,9 +9,12 @@ const StyledContactForm = styled.div`
   position: relative;
   padding-top: 6rem;
   padding-bottom: 9rem;
-  min-width: 34.3rem;
-  max-width: 44.5rem;
-  margin: 0 auto;
+
+  & .form-container {
+    min-width: 34.3rem;
+    max-width: 44.5rem;
+    margin: 0 auto;
+  }
 
   @media (min-width: 48em) {
     /* max-width:  */
@@ -44,6 +47,10 @@ const StyledContactForm = styled.div`
     height: 12.9rem;
     background: url("images/patterns/pattern-rings.svg") no-repeat center
       center/cover;
+
+    @media (min-width: 40em) {
+      bottom: 3rem;
+    }
   }
 `;
 
@@ -51,7 +58,9 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: end;
-
+  /* min-width: 34.3rem;
+  max-width: 44.5rem; */
+  margin: 0 auto;
   gap: 3.2rem;
 `;
 
@@ -64,36 +73,38 @@ export default function ContactForm() {
   // output
   return (
     <StyledContactForm>
-      <div className="contact-heading">
-        <h2>Contact</h2>
-        <p>
-          I would love to hear about your project and how I could help. Please
-          fill in the form, and I'll get back to you as soon as possible.
-        </p>
+      <div className="form-container">
+        <div className="contact-heading">
+          <h2>Contact</h2>
+          <p>
+            I would love to hear about your project and how I could help. Please
+            fill in the form, and I'll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <StyledForm>
+          <Input
+            placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+
+          <Input
+            placeholder="Email"
+            onChange={(e) => setemail(e.target.value)}
+            value={email}
+          />
+
+          <Textarea
+            placeholder="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            rows={3}
+          />
+
+          <Button>Send Message</Button>
+        </StyledForm>
       </div>
-
-      <StyledForm>
-        <Input
-          placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
-
-        <Input
-          placeholder="Email"
-          onChange={(e) => setemail(e.target.value)}
-          value={email}
-        />
-
-        <Textarea
-          placeholder="Message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          rows={3}
-        />
-
-        <Button>Send Message</Button>
-      </StyledForm>
     </StyledContactForm>
   );
 }
