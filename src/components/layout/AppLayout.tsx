@@ -5,8 +5,9 @@ import styled from "@emotion/styled";
 
 const Main = styled.main`
   text-align: center;
-  margin: 1.6rem;
+  padding: 1.6rem;
   min-width: 34.3rem;
+  overflow: hidden;
 
   @media (min-width: 48em) {
     text-align: left;

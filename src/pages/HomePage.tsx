@@ -10,6 +10,34 @@ const HeroSection = styled.section`
   gap: 2.4rem;
   z-index: -10;
 
+  & .img-wrapper {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 2rem;
+      left: -37rem;
+      content: "";
+      width: 530px;
+      height: 129px;
+      background: url("images/patterns/pattern-rings.svg") no-repeat center
+        center/cover;
+      z-index: -10;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0rem;
+      right: -72.5px;
+      width: 129px;
+      height: 129px;
+      background: url("images/patterns/pattern-circle.svg") no-repeat center
+        center/cover;
+      z-index: -10;
+    }
+  }
+
   & h1 {
     font-size: 4rem;
     font-weight: 700;
@@ -20,17 +48,29 @@ const HeroSection = styled.section`
     & span {
       display: inline-block;
       border-bottom: 4px solid var(--color-green-500);
-      /* margin-bottom: 1rem; */
-      /* line-height: -3rem; */
-      /* border-bottom- */
     }
   }
 `;
 
 const StyledHeroImg = styled.img`
+  /* display: block; */
   margin-top: -10rem;
   width: 17.5rem;
-  z-index: -99;
+
+  /* &::before {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    content: "Smithy";
+    /* background: url("images/patterns/pattern-rings.svg") no-repeat center
+      center/cover; */
+    /* background-size: cover; */
+  } */
+
+  &::after {
+    content: "monkey";
+  }
 `;
 
 const SkillsSection = styled.section`
@@ -59,18 +99,24 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <HeroSection id="hero-section">
-        <picture>
-          <source
-            media="(min-width: 90em)"
-            srcSet="images/profile/image-profile-desktop.webp"
-          />
-          <source
-            media="(min-width: 48em)"
-            srcSet="images/profile/image-profile-tablet.webp"
-          />
+        <div className="img-wrapper">
+          <picture>
+            <source
+              media="(min-width: 90em)"
+              srcSet="images/profile/image-profile-desktop.webp"
+            />
+            <source
+              media="(min-width: 48em)"
+              srcSet="images/profile/image-profile-tablet.webp"
+            />
 
-          <StyledHeroImg src="images/profile/image-profile-mobile.webp" />
-        </picture>
+            <StyledHeroImg
+              src="images/profile/image-profile-mobile.webp"
+              title="A portrait of Juan Gomez"
+              alt="A portrait image of Juan Gomez"
+            />
+          </picture>
+        </div>
 
         <h1>
           Nice to meet you! I'm <span>Juan Gomez</span>.
@@ -99,7 +145,7 @@ export default function HomePage() {
       </ProjectsSection>
 
       {/* Blogs Section */}
-      <BlogsSection id="blogs-section">Blogs</BlogsSection>
+      {/* <BlogsSection id="blogs-section">Blogs</BlogsSection> */}
 
       {/* Contact Section */}
       <ContactSection id="contact-section">Contact</ContactSection>
