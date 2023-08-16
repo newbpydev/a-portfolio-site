@@ -17,7 +17,8 @@ const StyledContactForm = styled.div`
   }
 
   @media (min-width: 48em) {
-    /* max-width:  */
+  }
+  @media (min-width: 90em) {
   }
 
   & .contact-heading {
@@ -28,13 +29,28 @@ const StyledContactForm = styled.div`
     line-height: 2.6rem;
     margin-bottom: 5rem;
 
+    @media (min-width: 48em) {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      margin-bottom: 4.8rem;
+    }
+    @media (min-width: 90em) {
+    }
+
     & h2 {
       color: white;
       font-size: 4rem;
       line-height: 4rem;
       font-weight: 700;
       letter-spacing: -1.136px;
-      /* margin-bottom: 2rem; */
+
+      @media (min-width: 48em) {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+        letter-spacing: -2.045px;
+      }
+      @media (min-width: 90em) {
+      }
     }
   }
 
@@ -48,8 +64,10 @@ const StyledContactForm = styled.div`
     background: url("images/patterns/pattern-rings.svg") no-repeat center
       center/cover;
 
-    @media (min-width: 40em) {
+    @media (min-width: 48em) {
       bottom: 3rem;
+    }
+    @media (min-width: 90em) {
     }
   }
 `;
@@ -58,10 +76,13 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: end;
-  /* min-width: 34.3rem;
-  max-width: 44.5rem; */
   margin: 0 auto;
   gap: 3.2rem;
+
+  @media (min-width: 48em) {
+  }
+  @media (min-width: 90em) {
+  }
 `;
 
 //* COMPONENT: ContactForm

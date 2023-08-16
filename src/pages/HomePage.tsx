@@ -237,6 +237,12 @@ const BlogsSection = styled.section`
 const ContactSection = styled.section`
   width: 100vw;
   background-color: var(--color-graydark-500);
+
+  @media (min-width: 48em) {
+    text-align: center;
+  }
+  @media (min-width: 90em) {
+  }
 `;
 
 //* COMPONENT: HomePage
