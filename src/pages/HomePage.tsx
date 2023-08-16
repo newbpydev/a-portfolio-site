@@ -9,10 +9,35 @@ const HeroSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  z-index: -10;
+  z-index: 0;
+
+  @media (min-width: 48em) {
+    flex-direction: row;
+  }
+  @media (min-width: 90em) {
+  }
+
+  & .hero-description {
+    @media (min-width: 48em) {
+      order: 0;
+      max-width: 65.75%;
+    }
+    @media (min-width: 90em) {
+    }
+  }
 
   & .img-wrapper {
-    position: relative;
+    /* position: relative; */
+    z-index: -1;
+
+    @media (min-width: 48em) {
+      /* position: absolute; */
+      width: 32.4rem;
+      height: 60rem;
+      order: 1;
+    }
+    @media (min-width: 90em) {
+    }
 
     &::before {
       position: absolute;
@@ -23,7 +48,12 @@ const HeroSection = styled.section`
       height: 129px;
       background: url("images/patterns/pattern-rings.svg") no-repeat center
         center/cover;
-      z-index: -10;
+      z-index: -11;
+
+      @media (min-width: 48em) {
+      }
+      @media (min-width: 90em) {
+      }
     }
 
     &::after {
@@ -36,6 +66,11 @@ const HeroSection = styled.section`
       background: url("images/patterns/pattern-circle.svg") no-repeat center
         center/cover;
       z-index: -10;
+
+      @media (min-width: 48em) {
+      }
+      @media (min-width: 90em) {
+      }
     }
   }
 
@@ -46,20 +81,38 @@ const HeroSection = styled.section`
     line-height: 4rem;
     letter-spacing: -1.136px;
 
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
+
     & span {
       display: inline-block;
       border-bottom: 4px solid var(--color-green-500);
+
+      @media (min-width: 48em) {
+      }
+      @media (min-width: 90em) {
+      }
     }
   }
 `;
 
 const StyledHeroImg = styled.img`
-  /* display: block; */
+  display: block;
   margin-top: -10rem;
   width: 17.5rem;
 
-  &::after {
-    content: "monkey";
+  @media (min-width: 48em) {
+    margin-top: 0rem;
+    position: absolute;
+    top: -10rem;
+    right: -3rem;
+    width: 32.2rem;
+    height: 600rem;
+    z-index: -20;
+  }
+  @media (min-width: 90em) {
   }
 `;
 
@@ -155,18 +208,20 @@ export default function HomePage() {
           </picture>
         </div>
 
-        <h1>
-          Nice to meet you! I'm <span>Juan Gomez</span>.
-        </h1>
+        <div className="hero-description">
+          <h1>
+            Nice to meet you! I'm <span>Juan Gomez</span>.
+          </h1>
 
-        <p>
-          Based in Linhares, Brazil, I'm a Software Engineer and Web Developer
-          with a flair for crafting web solutions that resonate. My journey
-          spans from teaching English to diving deep into the realms of web
-          development. Let's create something impactful together!
-        </p>
+          <p>
+            Based in Linhares, Brazil, I'm a Software Engineer and Web Developer
+            with a flair for crafting web solutions that resonate. My journey
+            spans from teaching English to diving deep into the realms of web
+            development. Let's create something impactful together!
+          </p>
 
-        <Button>Contact Me</Button>
+          <Button>Contact Me</Button>
+        </div>
       </HeroSection>
 
       {/* Skills Section */}

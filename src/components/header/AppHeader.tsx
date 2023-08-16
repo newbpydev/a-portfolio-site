@@ -5,17 +5,20 @@ import Logo from "../ui/logo/Logo";
 
 const StyledHeader = styled.header`
   /* margin: 2rem auto 0; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  z-index: 50;
 
   @media (min-width: 48em) {
     margin-top: 3rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
+    z-index: 50;
     /* margin: 3rem; */
   }
 
