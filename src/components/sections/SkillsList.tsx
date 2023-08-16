@@ -4,17 +4,39 @@ import { ExperienceTime } from "../../services/dates/experienceTime";
 import { Skill } from "../../types/data.skills";
 
 const StyledSkillItem = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 48em) {
+    gap: 1.4rem;
+  }
+  @media (min-width: 90em) {
+  }
+
   & h3 {
     color: var(--color-graylight-0);
     font-weight: 700;
     font-size: 3.2rem;
     letter-spacing: -1px;
     line-height: 4rem;
+
+    @media (min-width: 48em) {
+      font-size: 4.8rem;
+      line-height: 5.6rem;
+      letter-spacing: -1.5px;
+    }
+    @media (min-width: 90em) {
+    }
   }
 
   & p {
     font-size: var(----text-sm);
     line-height: 2.6rem;
+
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
   }
 `;
 

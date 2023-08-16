@@ -157,6 +157,7 @@ const SkillsSection = styled.section`
 
   @media (min-width: 38em) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 5.2rem;
     border-bottom: none;
   }
 
@@ -175,7 +176,7 @@ const SkillsSection = styled.section`
     height: 12.9rem;
 
     @media (min-width: 48em) {
-      bottom: 0rem;
+      bottom: -3rem;
     }
   }
 `;
@@ -260,13 +261,13 @@ export default function HomePage() {
       </SkillsSection>
 
       {/* Projects Section */}
-      {/* <ProjectsSection id="projects-section" className="container">
+      <ProjectsSection id="projects-section" className="container">
         <div className="projects-heading">
           <h2>Projects</h2>
           <Button>Contact Me</Button>
         </div>
         <ProjectsList />
-      </ProjectsSection> */}
+      </ProjectsSection>
 
       {/* Blogs Section */}
       {/* <BlogsSection id="blogs-section">Blogs</BlogsSection> */}
