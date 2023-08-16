@@ -4,6 +4,13 @@ import { RepoType } from "../../types/github";
 import { projectsData } from "../../data/repoData";
 import ProjectItem from "./ProjectItem";
 import { getRepo, getRepos } from "../../services/github/gitRepo";
+import styled from "@emotion/styled";
+
+const StyledProjectsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+`;
 
 //* COMPONENT: ProjectsList
 export default function ProjectsList() {
@@ -33,10 +40,10 @@ export default function ProjectsList() {
   // getRepos();
 
   return (
-    <div>
+    <StyledProjectsList>
       {projects.map((project) => (
         <ProjectItem key={project.id} project={project} />
       ))}
-    </div>
+    </StyledProjectsList>
   );
 }

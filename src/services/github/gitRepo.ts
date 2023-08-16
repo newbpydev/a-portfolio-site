@@ -25,6 +25,15 @@ export async function getRepo(name: string) {
   }
 }
 
+export asyn function getLanguages(name: string) {
+  try {
+    const repoData = await octokit.request("GET /repos/{owner}/{repo}", { owner: 'newbpydev', repo: name });
+    console.log(repoData)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export async function getRepos() {
   try {
     const repos = await octokit.request("GET /users/{username}/repos", {
