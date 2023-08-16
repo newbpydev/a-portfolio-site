@@ -13,6 +13,8 @@ const StyledProjectsList = styled.div`
 
   @media (min-width: 48em) {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 6rem;
+    column-gap: 2rem;
   }
 `;
 

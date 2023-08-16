@@ -9,27 +9,51 @@ const StyledProjectItem = styled.div`
   gap: 2rem;
   text-align: left;
 
+  @media (min-width: 48em) {
+  }
+  @media (min-width: 90em) {
+  }
+
   & img {
     /* margin-bottom: 2rem; */
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
   }
 
   & h3 {
     color: var(--color-graylight-0);
-    font-size: var(--text-m);
+    font-size: 2.4rem;
     font-weight: 700;
     line-height: 3.2rem;
     text-transform: uppercase;
     margin-bottom: 0.7rem;
+    @media (min-width: 48em) {
+      font-size: 2.4rem;
+    }
+    @media (min-width: 90em) {
+    }
   }
 
   & .project-languages {
     display: flex;
     gap: 1.8rem;
+
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
   }
 
   & .project-action-btns {
     display: flex;
     gap: 3.2rem;
+
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
   }
 `;
 

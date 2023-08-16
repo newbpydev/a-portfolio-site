@@ -186,7 +186,7 @@ const ProjectsSection = styled.section`
   padding: 8rem 0rem;
 
   @media (min-width: 48em) {
-    padding: 7rem 0rem;
+    padding: 7rem 0rem 10rem;
   }
   @media (min-width: 90em) {
   }
@@ -198,6 +198,7 @@ const ProjectsSection = styled.section`
     margin-bottom: 4rem;
 
     @media (min-width: 48em) {
+      margin-bottom: 6rem;
     }
     @media (min-width: 90em) {
     }
