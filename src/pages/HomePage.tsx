@@ -72,6 +72,23 @@ const SkillsSection = styled.section`
 `;
 
 const ProjectsSection = styled.section`
+  padding: 8rem 0rem;
+
+  & .projects-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    & h2 {
+      color: white;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 4rem;
+      letter-spacing: -1.136px;
+    }
+  }
+
   & h2 {
     font-size: var(--text);
   }
@@ -132,8 +149,10 @@ export default function HomePage() {
 
       {/* Projects Section */}
       <ProjectsSection id="projects-section">
-        <h2>Projects</h2>
-        <Button>Contact Me</Button>
+        <div className="projects-heading">
+          <h2>Projects</h2>
+          <Button>Contact Me</Button>
+        </div>
         <ProjectsList />
       </ProjectsSection>
 

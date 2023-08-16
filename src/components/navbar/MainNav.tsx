@@ -10,7 +10,7 @@ const NavMenuUl = styled.ul`
     transition: all 0.2s ease-in;
 
     &:hover {
-      color: var(--color-green-200);
+      color: var(--color-green-500);
     }
 
     &.active {
@@ -22,10 +22,8 @@ const NavMenuUl = styled.ul`
   }
 `;
 
-type Props = {};
-
 //* COMPONENT: MainNav
-export default function MainNav({}: Props) {
+export default function MainNav() {
   // output
   return (
     <nav>
