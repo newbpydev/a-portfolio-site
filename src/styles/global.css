@@ -67,3 +67,29 @@ body {
   font-size: 1.8rem;
   line-height: 2.8rem;
 }
+
+.container {
+  margin: 0rem 1.6rem;
+
+  @media (min-width: 48em) {
+    margin: 0rem 3rem;
+  }
+
+  @media (min-width: 90em) {
+    margin:  4rem auto;
+  }
+}
+
+.container-bottom {
+  padding:  0rem 1.6rem;
+  background-color: var(--color-graydark-500);
+  /* min-width: 100%; */
+
+  @media (min-width: 48em) {
+    padding: 0rem 3rem;
+  }
+
+  @media (min-width: 90em) {
+    padding: 4rem auto;
+  }
+}

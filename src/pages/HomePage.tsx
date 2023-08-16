@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import Button from "../components/buttons/Button";
 import SkillsList from "../components/sections/SkillsList";
 import ProjectsList from "../components/sections/ProjectsList";
+import ContactForm from "../components/sections/ContactForm";
 
 const HeroSection = styled.section`
   position: relative;
@@ -99,7 +100,8 @@ const BlogsSection = styled.section`
 `;
 
 const ContactSection = styled.section`
-  background-color: greenyellow;
+  width: 100vw;
+  background-color: var(--color-graydark-500);
 `;
 
 //* COMPONENT: HomePage
@@ -108,7 +110,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection id="hero-section">
+      <HeroSection id="hero-section" className="container">
         <div className="img-wrapper">
           <picture>
             <source
@@ -143,12 +145,12 @@ export default function HomePage() {
       </HeroSection>
 
       {/* Skills Section */}
-      <SkillsSection id="skills-section">
+      <SkillsSection id="skills-section" className="container">
         <SkillsList />
       </SkillsSection>
 
       {/* Projects Section */}
-      <ProjectsSection id="projects-section">
+      <ProjectsSection id="projects-section" className="container">
         <div className="projects-heading">
           <h2>Projects</h2>
           <Button>Contact Me</Button>
@@ -160,7 +162,9 @@ export default function HomePage() {
       {/* <BlogsSection id="blogs-section">Blogs</BlogsSection> */}
 
       {/* Contact Section */}
-      {/* <ContactSection id="contact-section">Contact</ContactSection> */}
+      <ContactSection id="contact-section" className="container-bottom">
+        <ContactForm />
+      </ContactSection>
     </>
   );
 }

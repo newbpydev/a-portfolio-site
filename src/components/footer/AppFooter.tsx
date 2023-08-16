@@ -4,21 +4,32 @@ import MainNav from "../navbar/MainNav";
 import SocialNav from "../navbar/SocialNav";
 
 const StyledFooter = styled.footer`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 15.4rem;
-  margin: 0 auto;
+  /* background-color: var(--color-graydark-500); */
+  /* justify-content: space-between; */
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+
+  & > div {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15.4rem;
+    margin: 0 auto;
+  }
 `;
 
 //* COMPONENT: AppFooter
 export default function AppFooter() {
   // output
   return (
-    <StyledFooter>
-      <Logo />
+    <StyledFooter className="container-bottom">
+      <div>
+        <Logo />
 
-      <SocialNav />
+        <SocialNav />
+      </div>
     </StyledFooter>
   );
 }

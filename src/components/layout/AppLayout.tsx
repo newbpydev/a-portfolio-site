@@ -5,17 +5,17 @@ import styled from "@emotion/styled";
 
 const Main = styled.main`
   text-align: center;
-  padding: 1.6rem;
-  min-width: 34.3rem;
+  /* padding: 1.6rem; */
+  /* min-width: 34.3rem; */
   overflow: hidden;
 
   @media (min-width: 48em) {
     text-align: left;
-    margin: 3rem;
+    /* margin: 3rem; */
   }
 
   @media (min-width: 90em) {
-    margin: 4rem auto;
+    /* margin: 4rem auto; */
     max-width: 111rem;
   }
   /* max-width: 34.4rem; */
