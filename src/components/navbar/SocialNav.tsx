@@ -9,6 +9,13 @@ const StyledSocialDiv = styled.div`
   min-width: 15.4rem;
   min-height: 2rem;
 
+  @media (min-width: 48em) {
+    min-height: 2.4rem;
+    min-width: 19.2rem;
+  }
+  @media (min-width: 90em) {
+  }
+
   & a {
   }
 

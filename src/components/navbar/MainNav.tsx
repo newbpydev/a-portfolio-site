@@ -6,6 +6,12 @@ const NavMenuUl = styled.ul`
   flex-direction: row;
   gap: 2rem;
 
+  @media (min-width: 48em) {
+    font-size: 2rem;
+  }
+  @media (min-width: 90em) {
+  }
+
   & a {
     transition: all 0.2s ease-in;
 

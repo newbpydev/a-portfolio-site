@@ -10,6 +10,13 @@ const StyledLogo = styled.span`
   line-height: 3.2rem;
   letter-spacing: -0.333px;
 
+  @media (min-width: 48em) {
+    font-size: 3.2rem;
+    letter-spacing: -0.444px;
+  }
+  @media (min-width: 90em) {
+  }
+
   &:hover {
     color: var(--color-green-500);
   }
