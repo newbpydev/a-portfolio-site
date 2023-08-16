@@ -66,11 +66,20 @@ const StyledHeroImg = styled.img`
 const SkillsSection = styled.section`
   position: relative;
   padding: 4rem 0rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2.4rem;
   border-top: 1px solid var(--color-graylight-0);
   border-bottom: 1px solid var(--color-graylight-0);
+
+  @media (min-width: 38em) {
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: none;
+  }
+
+  @media (min-width: 80em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   &::before {
     position: absolute;
@@ -81,6 +90,10 @@ const SkillsSection = styled.section`
     content: "";
     width: 53rem;
     height: 12.9rem;
+
+    @media (min-width: 48em) {
+      bottom: 0rem;
+    }
   }
 `;
 
@@ -162,13 +175,13 @@ export default function HomePage() {
       </SkillsSection>
 
       {/* Projects Section */}
-      <ProjectsSection id="projects-section" className="container">
+      {/* <ProjectsSection id="projects-section" className="container">
         <div className="projects-heading">
           <h2>Projects</h2>
           <Button>Contact Me</Button>
         </div>
         <ProjectsList />
-      </ProjectsSection>
+      </ProjectsSection> */}
 
       {/* Blogs Section */}
       {/* <BlogsSection id="blogs-section">Blogs</BlogsSection> */}

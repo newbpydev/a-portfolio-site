@@ -7,9 +7,13 @@ import { getRepo, getRepos } from "../../services/github/gitRepo";
 import styled from "@emotion/styled";
 
 const StyledProjectsList = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 4rem;
+
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 //* COMPONENT: ProjectsList

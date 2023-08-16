@@ -17,6 +17,12 @@ const StyledFooter = styled.footer`
     justify-content: center;
     width: 15.4rem;
     margin: 0 auto;
+
+    @media (min-width: 48em) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 `;
 

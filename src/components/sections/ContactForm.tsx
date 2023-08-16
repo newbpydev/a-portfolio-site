@@ -9,6 +9,13 @@ const StyledContactForm = styled.div`
   position: relative;
   padding-top: 6rem;
   padding-bottom: 9rem;
+  min-width: 34.3rem;
+  max-width: 44.5rem;
+  margin: 0 auto;
+
+  @media (min-width: 48em) {
+    /* max-width:  */
+  }
 
   & .contact-heading {
     display: flex;
