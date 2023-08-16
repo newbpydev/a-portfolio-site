@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const StyledLogo = styled.span`
   color: var(--color-graylight-0);
-  transition: color 0.3s ease-in;
+  transition: color 0.2s ease-in;
   cursor: pointer;
   font-size: 2.4rem;
   font-weight: 700;
@@ -11,7 +11,7 @@ const StyledLogo = styled.span`
   letter-spacing: -0.333px;
 
   &:hover {
-    color: var(--color-graylight-400);
+    color: var(--color-green-500);
   }
 `;
 

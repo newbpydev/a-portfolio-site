@@ -19,7 +19,7 @@ const StyledSocialDiv = styled.div`
     transition: fill 0.2s ease-in-out;
 
     &:hover {
-      fill: var(--color-graylight-400);
+      fill: var(--color-green-500);
     }
   }
 

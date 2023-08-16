@@ -57,17 +57,6 @@ const StyledHeroImg = styled.img`
   margin-top: -10rem;
   width: 17.5rem;
 
-  /* &::before {
-    position: absolute;
-    display: block;
-    top: 0px;
-    left: 0px;
-    content: "Smithy";
-    /* background: url("images/patterns/pattern-rings.svg") no-repeat center
-      center/cover; */
-    /* background-size: cover; */
-  } */
-
   &::after {
     content: "monkey";
   }
@@ -82,7 +71,11 @@ const SkillsSection = styled.section`
   border-bottom: 1px solid var(--color-graylight-0);
 `;
 
-const ProjectsSection = styled.section``;
+const ProjectsSection = styled.section`
+  & h2 {
+    font-size: var(--text);
+  }
+`;
 
 const BlogsSection = styled.section`
   background-color: lightsalmon;
@@ -148,7 +141,7 @@ export default function HomePage() {
       {/* <BlogsSection id="blogs-section">Blogs</BlogsSection> */}
 
       {/* Contact Section */}
-      <ContactSection id="contact-section">Contact</ContactSection>
+      {/* <ContactSection id="contact-section">Contact</ContactSection> */}
     </>
   );
 }
