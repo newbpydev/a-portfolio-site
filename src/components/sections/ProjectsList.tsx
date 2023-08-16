@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { RepoType } from "../../types/github";
 import { projectsData } from "../../data/repoData";
 import ProjectItem from "./ProjectItem";
-import { getRepo } from "../../services/github/gitRepo";
+import { getRepo, getRepos } from "../../services/github/gitRepo";
 
 //* COMPONENT: ProjectsList
 export default function ProjectsList() {
@@ -30,7 +30,7 @@ export default function ProjectsList() {
   // }, []);
 
   // output
-  getRepo("");
+  // getRepos();
 
   return (
     <div>

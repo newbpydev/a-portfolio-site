@@ -24,3 +24,16 @@ export async function getRepo(name: string) {
     console.log(error);
   }
 }
+
+export async function getRepos() {
+  try {
+    const repos = await octokit.request("GET /users/{username}/repos", {
+      username: "newbpydev",
+      per_page: 50,
+      sort: "updated",
+    });
+    console.log(repos.headers.link, repos.data);
+  } catch (error) {
+    console.log(error);
+  }
+}

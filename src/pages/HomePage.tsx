@@ -4,9 +4,11 @@ import SkillsList from "../components/sections/SkillsList";
 import ProjectsList from "../components/sections/ProjectsList";
 
 const HeroSection = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  z-index: -10;
 
   & h1 {
     font-size: 4rem;
@@ -23,6 +25,12 @@ const HeroSection = styled.section`
       /* border-bottom- */
     }
   }
+`;
+
+const StyledHeroImg = styled.img`
+  margin-top: -10rem;
+  width: 17.5rem;
+  z-index: -99;
 `;
 
 const SkillsSection = styled.section`
@@ -50,7 +58,20 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection>
+      <HeroSection id="hero-section">
+        <picture>
+          <source
+            media="(min-width: 90em)"
+            srcSet="images/profile/image-profile-desktop.webp"
+          />
+          <source
+            media="(min-width: 48em)"
+            srcSet="images/profile/image-profile-tablet.webp"
+          />
+
+          <StyledHeroImg src="images/profile/image-profile-mobile.webp" />
+        </picture>
+
         <h1>
           Nice to meet you! I'm <span>Juan Gomez</span>.
         </h1>
@@ -66,22 +87,22 @@ export default function HomePage() {
       </HeroSection>
 
       {/* Skills Section */}
-      <SkillsSection>
+      <SkillsSection id="skills-section">
         <SkillsList />
       </SkillsSection>
 
       {/* Projects Section */}
-      <ProjectsSection>
+      <ProjectsSection id="projects-section">
         <h2>Projects</h2>
         <Button>Contact Me</Button>
         <ProjectsList />
       </ProjectsSection>
 
       {/* Blogs Section */}
-      <BlogsSection>Blogs</BlogsSection>
+      <BlogsSection id="blogs-section">Blogs</BlogsSection>
 
       {/* Contact Section */}
-      <ContactSection>Contact</ContactSection>
+      <ContactSection id="contact-section">Contact</ContactSection>
     </>
   );
 }
