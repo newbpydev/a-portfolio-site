@@ -11,6 +11,40 @@ const HeroSection = styled.section`
   gap: 2.4rem;
   z-index: 0;
 
+  &::before {
+    position: absolute;
+    top: 2rem;
+    left: -36rem;
+    content: "";
+    width: 530px;
+    height: 129px;
+    background: url("images/patterns/pattern-rings.svg") no-repeat center
+      center/cover;
+    z-index: -11;
+
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 15.5rem;
+    right: -72.5px;
+    width: 129px;
+    height: 129px;
+    background: url("images/patterns/pattern-circle.svg") no-repeat center
+      center/cover;
+    z-index: -10;
+
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
+  }
+
   @media (min-width: 48em) {
     flex-direction: row;
   }
@@ -28,6 +62,7 @@ const HeroSection = styled.section`
 
   & .img-wrapper {
     /* position: relative; */
+    margin: 0 auto;
     z-index: -1;
 
     @media (min-width: 48em) {
@@ -37,40 +72,6 @@ const HeroSection = styled.section`
       order: 1;
     }
     @media (min-width: 90em) {
-    }
-
-    &::before {
-      position: absolute;
-      top: 2rem;
-      left: -37rem;
-      content: "";
-      width: 530px;
-      height: 129px;
-      background: url("images/patterns/pattern-rings.svg") no-repeat center
-        center/cover;
-      z-index: -11;
-
-      @media (min-width: 48em) {
-      }
-      @media (min-width: 90em) {
-      }
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0rem;
-      right: -72.5px;
-      width: 129px;
-      height: 129px;
-      background: url("images/patterns/pattern-circle.svg") no-repeat center
-        center/cover;
-      z-index: -10;
-
-      @media (min-width: 48em) {
-      }
-      @media (min-width: 90em) {
-      }
     }
   }
 
