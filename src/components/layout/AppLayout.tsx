@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 const Main = styled.main`
   text-align: center;
   /* padding: 1.6rem; */
-  /* min-width: 34.3rem; */
+  /* min-width: 100vw; */
   overflow: hidden;
 
   @media (min-width: 48em) {
@@ -16,8 +16,10 @@ const Main = styled.main`
 
   @media (min-width: 90em) {
     /* margin: 4rem auto; */
-    max-width: 111rem;
+    /* max-width: 111rem; */
     margin: 0 auto;
+    overflow: hidden;
+    /* overflow-x: hidden; */
   }
   /* max-width: 34.4rem; */
 `;

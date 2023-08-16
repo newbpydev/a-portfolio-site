@@ -39,7 +39,7 @@ export default function SocialNav() {
   return (
     <StyledSocialDiv>
       <a
-        href="http://"
+        href="https://github.com/newbpydev"
         target="_blank"
         rel="noopener noreferrer"
         title="Link to GitHub"
@@ -48,7 +48,7 @@ export default function SocialNav() {
       </a>
 
       <a
-        href="http://"
+        href="https://www.frontendmentor.io/profile/newbpydev"
         target="_blank"
         rel="noopener noreferrer"
         title="Link to Frontend Mentor"

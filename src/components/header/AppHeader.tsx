@@ -24,6 +24,7 @@ const StyledHeader = styled.header`
   }
 
   @media (min-width: 90em) {
+    margin-bottom: 12.7rem;
   }
 
   & .main-nav-wrapper {
@@ -42,10 +43,8 @@ const StyledHeader = styled.header`
   /* width: 15.4rem; */
 `;
 
-type Props = {};
-
 //* COMPONENT: AppHeader
-export default function AppHeader({}: Props) {
+export default function AppHeader() {
   // output
   return (
     <StyledHeader className="container">
