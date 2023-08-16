@@ -64,12 +64,24 @@ const StyledHeroImg = styled.img`
 `;
 
 const SkillsSection = styled.section`
+  position: relative;
   padding: 4rem 0rem;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
   border-top: 1px solid var(--color-graylight-0);
   border-bottom: 1px solid var(--color-graylight-0);
+
+  &::before {
+    position: absolute;
+    background: url("images/patterns/pattern-rings.svg") no-repeat center
+      center/cover;
+    right: -37rem;
+    bottom: -6.4rem;
+    content: "";
+    width: 53rem;
+    height: 12.9rem;
+  }
 `;
 
 const ProjectsSection = styled.section`
