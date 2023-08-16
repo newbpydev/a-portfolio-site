@@ -159,6 +159,7 @@ const SkillsSection = styled.section`
     grid-template-columns: repeat(2, 1fr);
     gap: 5.2rem;
     border-bottom: none;
+    padding: 4.5rem 0;
   }
 
   @media (min-width: 80em) {
@@ -184,11 +185,22 @@ const SkillsSection = styled.section`
 const ProjectsSection = styled.section`
   padding: 8rem 0rem;
 
+  @media (min-width: 48em) {
+    padding: 7rem 0rem;
+  }
+  @media (min-width: 90em) {
+  }
+
   & .projects-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4rem;
+
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
 
     & h2 {
       color: white;
@@ -196,12 +208,25 @@ const ProjectsSection = styled.section`
       font-weight: 700;
       line-height: 4rem;
       letter-spacing: -1.136px;
+
+      @media (min-width: 48em) {
+        font-size: 7.2rem;
+        line-height: 7.2rem;
+        letter-spacing: -2.045px;
+      }
+      @media (min-width: 90em) {
+      }
     }
   }
 
-  & h2 {
+  /* & h2 {
     font-size: var(--text);
-  }
+
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+    }
+  } */
 `;
 
 const BlogsSection = styled.section`
