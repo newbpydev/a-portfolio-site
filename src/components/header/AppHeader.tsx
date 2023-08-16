@@ -4,7 +4,7 @@ import SocialNav from "../navbar/SocialNav";
 import Logo from "../ui/logo/Logo";
 
 const StyledHeader = styled.header`
-  /* margin: 2rem auto 0; */
+  margin-top: 2rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@ const StyledHeader = styled.header`
 
   @media (min-width: 48em) {
     margin-top: 3rem;
+    margin-bottom: 9rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
