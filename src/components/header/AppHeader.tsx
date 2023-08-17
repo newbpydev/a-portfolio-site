@@ -38,6 +38,7 @@ const StyledHeader = styled.header`
       gap: 1.5rem;
     }
     @media (min-width: 90em) {
+      margin-right: 3rem;
     }
   }
   /* width: 15.4rem; */

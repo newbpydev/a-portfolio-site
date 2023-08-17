@@ -10,6 +10,7 @@ const HeroSection = styled.section`
   flex-direction: column;
   gap: 2.4rem;
   z-index: 0;
+  border-bottom: 1px solid white;
 
   @media (min-width: 48em) {
     flex-direction: row;
@@ -53,6 +54,8 @@ const HeroSection = styled.section`
       right: -9rem;
     }
     @media (min-width: 90em) {
+      right: 38rem;
+      top: 32rem;
     }
   }
 
@@ -119,11 +122,13 @@ const HeroSection = styled.section`
 
     @media (min-width: 48em) {
       /* position: absolute; */
-      width: 32.4rem;
-      height: 60rem;
+      /* width: 32.4rem;
+      height: 60rem; */
       order: 1;
     }
     @media (min-width: 90em) {
+      height: 72rem;
+      width: 44.5rem;
     }
   }
 `;
@@ -132,6 +137,7 @@ const StyledHeroImg = styled.img`
   display: block;
   margin-top: -10rem;
   width: 17.5rem;
+  height: auto;
 
   @media (min-width: 48em) {
     margin-top: 0rem;
@@ -139,10 +145,14 @@ const StyledHeroImg = styled.img`
     top: -19rem;
     right: -3rem;
     width: 32.2rem;
-    height: 600rem;
+    height: 60rem;
     z-index: -20;
   }
   @media (min-width: 90em) {
+    right: 0rem;
+    top: -23rem;
+    width: 44.5rem;
+    height: 72rem;
   }
 `;
 
