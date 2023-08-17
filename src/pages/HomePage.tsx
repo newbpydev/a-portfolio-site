@@ -55,7 +55,7 @@ const HeroSection = styled.section`
     }
     @media (min-width: 90em) {
       right: 38rem;
-      top: 32rem;
+      top: 30rem;
     }
   }
 
@@ -74,6 +74,7 @@ const HeroSection = styled.section`
       margin-bottom: 6rem;
     }
     @media (min-width: 90em) {
+      margin-bottom: 21.9rem;
     }
 
     & h1 {
@@ -91,6 +92,10 @@ const HeroSection = styled.section`
         margin-bottom: 6rem;
       }
       @media (min-width: 90em) {
+        font-size: 8.8rem;
+        line-height: 8.8rem;
+        letter-spacing: -2.5px;
+        margin-bottom: 4.3rem;
       }
 
       & span {
@@ -100,6 +105,7 @@ const HeroSection = styled.section`
         @media (min-width: 48em) {
         }
         @media (min-width: 90em) {
+          border-bottom: 6px solid var(--color-green-500);
         }
       }
     }
@@ -111,19 +117,17 @@ const HeroSection = styled.section`
         margin-bottom: 3.4rem;
       }
       @media (min-width: 90em) {
+        width: 44.5rem;
+        margin-bottom: 6.6rem;
       }
     }
   }
 
   & .img-wrapper {
-    /* position: relative; */
     margin: 0 auto;
     z-index: -1;
 
     @media (min-width: 48em) {
-      /* position: absolute; */
-      /* width: 32.4rem;
-      height: 60rem; */
       order: 1;
     }
     @media (min-width: 90em) {
@@ -137,7 +141,8 @@ const StyledHeroImg = styled.img`
   display: block;
   margin-top: -10rem;
   width: 17.5rem;
-  height: auto;
+  height: 38.3rem;
+  /* height: auto; */
 
   @media (min-width: 48em) {
     margin-top: 0rem;
@@ -174,6 +179,7 @@ const SkillsSection = styled.section`
 
   @media (min-width: 80em) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 7.2rem 0rem;
   }
 
   &::before {
@@ -211,6 +217,7 @@ const ProjectsSection = styled.section`
       margin-bottom: 6rem;
     }
     @media (min-width: 90em) {
+      margin-bottom: 8rem;
     }
 
     & h2 {
@@ -226,6 +233,9 @@ const ProjectsSection = styled.section`
         letter-spacing: -2.045px;
       }
       @media (min-width: 90em) {
+        font-size: 8.8rem;
+        line-height: 8.8rem;
+        letter-spacing: -2.5px;
       }
     }
   }

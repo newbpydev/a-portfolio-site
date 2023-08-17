@@ -12,6 +12,7 @@ const StyledProjectItem = styled.div`
   @media (min-width: 48em) {
   }
   @media (min-width: 90em) {
+    position: relative;
   }
 
   & img {
@@ -19,6 +20,10 @@ const StyledProjectItem = styled.div`
     @media (min-width: 48em) {
     }
     @media (min-width: 90em) {
+      /* z-index: 0; */
+      &:hover {
+        background-color: rgba(black, 0.5);
+      }
     }
   }
 
@@ -53,6 +58,25 @@ const StyledProjectItem = styled.div`
     @media (min-width: 48em) {
     }
     @media (min-width: 90em) {
+      position: absolute;
+      /* display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; */
+      top: 0rem;
+      left: 0rem;
+      width: 100%;
+      height: 82%;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
     }
   }
 `;

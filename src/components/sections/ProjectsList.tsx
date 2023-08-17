@@ -16,6 +16,11 @@ const StyledProjectsList = styled.div`
     row-gap: 6rem;
     column-gap: 2rem;
   }
+
+  @media (min-width: 90em) {
+    row-gap: 7rem;
+    column-gap: 3rem;
+  }
 `;
 
 //* COMPONENT: ProjectsList

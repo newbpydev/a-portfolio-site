@@ -34,6 +34,7 @@ const StyledSkillItem = styled.div`
     line-height: 2.6rem;
 
     @media (min-width: 48em) {
+      font-sze: 1.8rem;
     }
     @media (min-width: 90em) {
     }
