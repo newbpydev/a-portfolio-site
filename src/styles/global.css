@@ -98,3 +98,7 @@ body {
     /* margin: 0 auto; */
   }
 }
+
+.invalid {
+    border-bottom: 1px solid var(--color-error);
+  }

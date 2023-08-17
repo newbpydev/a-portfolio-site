@@ -5,6 +5,7 @@ import { FormEventHandler, useState } from "react";
 import Textarea from "../form/Textarea";
 import styled from "@emotion/styled";
 import validator from "validator";
+import WrongIcon from "../ui/social/WrongIcon";
 
 const StyledContactForm = styled.div`
   border-bottom: 1px solid white;
@@ -136,23 +137,21 @@ const StyledInputWrapper = styled.div`
   position: relative;
 `;
 
+const StyledWrongIcon = styled.svg``;
+
 // *                                 Types                                |
-interface InvalidInput {
-  nameError: string;
-  emailError: string;
-  messageError: string;
-}
+// interface InvalidInput {
+//   nameError: string;
+//   emailError: string;
+//   messageError: string;
+// }
 
 //* COMPONENT: ContactForm
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState<InvalidInput>({
-    nameError: "",
-    emailError: "",
-    messageError: "",
-  });
+
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidName, setIsValidName] = useState(true);
   const [isValidMessage, setIsValidMessage] = useState(true);
@@ -163,7 +162,7 @@ export default function ContactForm() {
     if (!name && !email && !message) return;
 
     // Validating Name
-    if (!name || name.length < 2 || !name.trim()) {
+    if (!name || name.length < 4 || !name.trim()) {
       setIsValidName(false);
     } else {
       setIsValidName(true);
@@ -175,6 +174,8 @@ export default function ContactForm() {
     } else {
       setIsValidMessage(true);
     }
+
+    // TODO: Come back to finish the submission process
   };
 
   // output
@@ -196,12 +197,16 @@ export default function ContactForm() {
               placeholder="Name"
               onChange={(e) => setName(e.target.value)}
               value={name}
+              isInvalid={!isValidName}
               required
             />
             {!isValidName && (
-              <StyledErrorMessage>
-                Sorry, invalid format here!
-              </StyledErrorMessage>
+              <>
+                <WrongIcon />
+                <StyledErrorMessage>
+                  Sorry, invalid format here!
+                </StyledErrorMessage>
+              </>
             )}
           </StyledInputWrapper>
 
@@ -215,12 +220,16 @@ export default function ContactForm() {
                 setIsValidEmail(validator.isEmail(newEmail));
               }}
               value={email}
+              isInvalid={!isValidEmail}
               required
             />
             {!isValidEmail && (
-              <StyledErrorMessage>
-                Sorry, invalid format here!
-              </StyledErrorMessage>
+              <>
+                <WrongIcon />
+                <StyledErrorMessage>
+                  Sorry, invalid format here!
+                </StyledErrorMessage>
+              </>
             )}
           </StyledInputWrapper>
 
@@ -230,12 +239,16 @@ export default function ContactForm() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={3}
+              isInvalid={!isValidMessage}
               required
             />
             {!isValidMessage && (
-              <StyledErrorMessage>
-                Sorry, invalid format here!
-              </StyledErrorMessage>
+              <>
+                <WrongIcon />
+                <StyledErrorMessage>
+                  Sorry, invalid format here!
+                </StyledErrorMessage>
+              </>
             )}
           </StyledInputWrapper>
 

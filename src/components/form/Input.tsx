@@ -15,14 +15,18 @@ const StyledInput = styled.input`
     color: white;
     opacity: 0.5;
   }
+
+  &.invalid {
+    border-bottom-color: var(--color-error);
+  }
 `;
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  // test: string;
+  isInvalid?: boolean;
 }
 
 //* COMPONENT: Input
-export default function Input({ ...rest }: Props) {
+export default function Input({ isInvalid, ...rest }: Props) {
   // output
-  return <StyledInput {...rest} />;
+  return <StyledInput {...rest} className={isInvalid ? "invalid" : ""} />;
 }
