@@ -264,7 +264,7 @@ const ContactSection = styled.section`
   }
   @media (min-width: 90em) {
     text-align: left;
-    width: 100%;
+    /* width: 100%; */
   }
 `;
 

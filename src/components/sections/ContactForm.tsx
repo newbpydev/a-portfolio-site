@@ -15,6 +15,8 @@ const StyledContactForm = styled.div`
   @media (min-width: 90em) {
     /* width: 100%; */
     /* display: flex; */
+    max-width: 111rem;
+    margin: 0 auto;
   }
 
   & .form-container {
@@ -33,40 +35,47 @@ const StyledContactForm = styled.div`
       /* margin: 0 auto; */
       max-width: 100%;
       flex-direction: row;
-      justify-content: space-around;
-    }
-  }
-
-  & .contact-heading {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    font-size: var(--text-sm);
-    line-height: 2.6rem;
-    margin-bottom: 5rem;
-
-    @media (min-width: 48em) {
-      font-size: 1.8rem;
-      line-height: 2.8rem;
-      margin-bottom: 4.8rem;
-    }
-    @media (min-width: 90em) {
-      width: 44.5rem;
+      align-items: start;
+      justify-content: center;
+      gap: 22rem;
     }
 
-    & h2 {
-      color: white;
-      font-size: 4rem;
-      line-height: 4rem;
-      font-weight: 700;
-      letter-spacing: -1.136px;
+    & .contact-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: var(--text-sm);
+      line-height: 2.6rem;
+      margin-bottom: 5rem;
 
       @media (min-width: 48em) {
-        font-size: 7.2rem;
-        line-height: 7.2rem;
-        letter-spacing: -2.045px;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        margin-bottom: 4.8rem;
+        min-width: 44.5rem;
       }
       @media (min-width: 90em) {
+        width: 44.5rem;
+        gap: 3.6rem;
+      }
+
+      & h2 {
+        color: white;
+        font-size: 4rem;
+        line-height: 4rem;
+        font-weight: 700;
+        letter-spacing: -1.136px;
+
+        @media (min-width: 48em) {
+          font-size: 7.2rem;
+          line-height: 7.2rem;
+          letter-spacing: -2.045px;
+        }
+        @media (min-width: 90em) {
+          font-size: 8.8rem;
+          line-height: 8.8rem;
+          letter-spacing: -2.5px;
+        }
       }
     }
   }
@@ -97,9 +106,11 @@ const StyledForm = styled.form`
   gap: 3.2rem;
 
   @media (min-width: 48em) {
+    min-width: 44.5rem;
   }
   @media (min-width: 90em) {
     min-width: 44.5rem;
+    margin: 0;
   }
 `;
 
