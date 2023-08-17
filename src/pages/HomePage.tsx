@@ -263,6 +263,8 @@ const ContactSection = styled.section`
     text-align: center;
   }
   @media (min-width: 90em) {
+    text-align: left;
+    width: 100%;
   }
 `;
 

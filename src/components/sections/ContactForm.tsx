@@ -10,15 +10,31 @@ const StyledContactForm = styled.div`
   padding-top: 6rem;
   padding-bottom: 9rem;
 
+  @media (min-width: 48em) {
+  }
+  @media (min-width: 90em) {
+    /* width: 100%; */
+    /* display: flex; */
+  }
+
   & .form-container {
     min-width: 34.3rem;
     max-width: 44.5rem;
     margin: 0 auto;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  @media (min-width: 48em) {
-  }
-  @media (min-width: 90em) {
+    @media (min-width: 48em) {
+    }
+    @media (min-width: 90em) {
+      /* min-width: 140rem; */
+      /* margin: 0 auto; */
+      max-width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 
   & .contact-heading {
@@ -35,6 +51,7 @@ const StyledContactForm = styled.div`
       margin-bottom: 4.8rem;
     }
     @media (min-width: 90em) {
+      width: 44.5rem;
     }
 
     & h2 {
@@ -82,6 +99,7 @@ const StyledForm = styled.form`
   @media (min-width: 48em) {
   }
   @media (min-width: 90em) {
+    min-width: 44.5rem;
   }
 `;
 

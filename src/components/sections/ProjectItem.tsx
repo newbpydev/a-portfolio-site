@@ -65,17 +65,18 @@ const StyledProjectItem = styled.div`
       justify-content: center; */
       top: 0rem;
       left: 0rem;
-      width: 100%;
-      height: 82%;
+      width: 54rem;
+      height: 40rem;
+      transition: opacity 0.2s ease-out;
       opacity: 0;
 
       &:hover {
-        opacity: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.75);
+        opacity: 1;
       }
     }
   }
