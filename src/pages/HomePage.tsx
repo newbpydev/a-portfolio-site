@@ -205,6 +205,7 @@ const ProjectsSection = styled.section`
     padding: 7rem 0rem 10rem;
   }
   @media (min-width: 90em) {
+    padding: 8rem 0rem 14rem;
   }
 
   & .projects-heading {
