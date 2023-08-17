@@ -10,6 +10,11 @@ const StyledInput = styled.input`
   font-size: 1.6rem;
   letter-spacing: -0.222px;
   width: 100%;
+
+  &::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
 `;
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {

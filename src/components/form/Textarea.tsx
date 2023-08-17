@@ -10,6 +10,11 @@ const StyledTextarea = styled.textarea`
   font-size: var(--text-sm);
   letter-spacing: -0.222px;
   width: 100%;
+
+  &::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
 `;
 
 interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
