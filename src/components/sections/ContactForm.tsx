@@ -103,6 +103,7 @@ const StyledForm = styled.form`
   flex-direction: column;
   align-items: end;
   margin: 0 auto;
+  min-width: 34.3rem;
   gap: 3.2rem;
 
   @media (min-width: 48em) {
