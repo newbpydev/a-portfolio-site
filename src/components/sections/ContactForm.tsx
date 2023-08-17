@@ -6,6 +6,11 @@ import Textarea from "../form/Textarea";
 import styled from "@emotion/styled";
 import validator from "validator";
 import WrongIcon from "../ui/social/WrongIcon";
+import {
+  getRateLimit,
+  getRepos,
+  getUserLanguages,
+} from "../../services/github/gitRepo";
 
 const StyledContactForm = styled.div`
   border-bottom: 1px solid white;
@@ -137,8 +142,6 @@ const StyledInputWrapper = styled.div`
   position: relative;
 `;
 
-const StyledWrongIcon = styled.svg``;
-
 // *                                 Types                                |
 // interface InvalidInput {
 //   nameError: string;
@@ -177,6 +180,10 @@ export default function ContactForm() {
 
     // TODO: Come back to finish the submission process
   };
+
+  // getRateLimit();
+  // getRepos();
+  // getUserLanguages();
 
   // output
   return (
