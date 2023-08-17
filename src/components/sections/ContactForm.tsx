@@ -1,9 +1,10 @@
 // import styled from "@emotion/styled";
 import Input from "../form/Input";
 import Button from "../buttons/Button";
-import { useState } from "react";
+import { FormEventHandler, useState } from "react";
 import Textarea from "../form/Textarea";
 import styled from "@emotion/styled";
+import validator from "validator";
 
 const StyledContactForm = styled.div`
   border-bottom: 1px solid white;
@@ -102,7 +103,7 @@ const StyledContactForm = styled.div`
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: end;
+  /* align-items: center; */
   margin: 0 auto;
   min-width: 34.3rem;
   gap: 3.2rem;
@@ -114,13 +115,67 @@ const StyledForm = styled.form`
     min-width: 44.5rem;
     margin: 0;
   }
+
+  & button {
+    align-self: end;
+  }
 `;
+
+const StyledErrorMessage = styled.p`
+  position: absolute;
+  right: 0rem;
+  bottom: -2rem;
+
+  color: var(--color-error);
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.167px;
+`;
+
+const StyledInputWrapper = styled.div`
+  position: relative;
+`;
+
+// *                                 Types                                |
+interface InvalidInput {
+  nameError: string;
+  emailError: string;
+  messageError: string;
+}
 
 //* COMPONENT: ContactForm
 export default function ContactForm() {
   const [name, setName] = useState("");
-  const [email, setemail] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState<InvalidInput>({
+    nameError: "",
+    emailError: "",
+    messageError: "",
+  });
+  const [isValidEmail, setIsValidEmail] = useState(true);
+  const [isValidName, setIsValidName] = useState(true);
+  const [isValidMessage, setIsValidMessage] = useState(true);
+
+  const handleSubmit: FormEventHandler = (e) => {
+    e.preventDefault();
+
+    if (!name && !email && !message) return;
+
+    // Validating Name
+    if (!name || name.length < 2 || !name.trim()) {
+      setIsValidName(false);
+    } else {
+      setIsValidName(true);
+    }
+
+    // Validating Message
+    if (!message || message.length < 2 || !message.trim()) {
+      setIsValidMessage(false);
+    } else {
+      setIsValidMessage(true);
+    }
+  };
 
   // output
   return (
@@ -134,27 +189,57 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <StyledForm>
-          <Input
-            placeholder="Name"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-          />
+        <StyledForm onSubmit={handleSubmit}>
+          <StyledInputWrapper>
+            <Input
+              minLength={2}
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              required
+            />
+            {!isValidName && (
+              <StyledErrorMessage>
+                Sorry, invalid format here!
+              </StyledErrorMessage>
+            )}
+          </StyledInputWrapper>
 
-          <Input
-            placeholder="Email"
-            onChange={(e) => setemail(e.target.value)}
-            value={email}
-          />
+          <StyledInputWrapper>
+            <Input
+              placeholder="Email"
+              onChange={(e) => {
+                const newEmail = e.target.value;
+                setEmail(newEmail);
+                // validate the email format
+                setIsValidEmail(validator.isEmail(newEmail));
+              }}
+              value={email}
+              required
+            />
+            {!isValidEmail && (
+              <StyledErrorMessage>
+                Sorry, invalid format here!
+              </StyledErrorMessage>
+            )}
+          </StyledInputWrapper>
 
-          <Textarea
-            placeholder="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            rows={3}
-          />
+          <StyledInputWrapper>
+            <Textarea
+              placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              rows={3}
+              required
+            />
+            {!isValidMessage && (
+              <StyledErrorMessage>
+                Sorry, invalid format here!
+              </StyledErrorMessage>
+            )}
+          </StyledInputWrapper>
 
-          <Button>Send Message</Button>
+          <Button type="submit">Send Message</Button>
         </StyledForm>
       </div>
     </StyledContactForm>

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 
 const StyledButton = styled.button`
   color: white;
@@ -19,9 +19,11 @@ const StyledButton = styled.button`
   }
 `;
 
-type Props = {
-  children: ReactNode;
-};
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
+
+// type Props = {
+//   children: ReactNode;
+// };
 
 //* COMPONENT: Button
 export default function Button({ children }: Props) {
