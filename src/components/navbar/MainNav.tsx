@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
+import navData from "../../data/navigation.json";
 
 const NavMenuUl = styled.ul`
   display: flex;
@@ -30,23 +31,16 @@ const NavMenuUl = styled.ul`
 
 //* COMPONENT: MainNav
 export default function MainNav() {
+  const renderNav = navData.map((nav) => (
+    <li key={nav.to}>
+      <NavLink to={nav.to}>{nav.name}</NavLink>
+    </li>
+  ));
+
   // output
   return (
     <nav>
-      <NavMenuUl as="ul">
-        <li>
-          <NavLink to={"/"}>Home</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/blog"}>Blog</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/projects"}>Projects</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/about"}>About</NavLink>
-        </li>
-      </NavMenuUl>
+      <NavMenuUl as="ul">{renderNav}</NavMenuUl>
     </nav>
   );
 }
