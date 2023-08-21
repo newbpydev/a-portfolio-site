@@ -3,7 +3,8 @@ import styled from "@emotion/styled";
 type Props = {};
 
 const StyledAboutPage = styled.section`
-  & .title {
+  & .about-title {
+    color: white;
     font-size: 4rem;
     font-weight: 700;
     line-height: 4rem;
@@ -11,7 +12,16 @@ const StyledAboutPage = styled.section`
     margin-bottom: 2rem;
   }
 
-  & .description {
+  & .about-subtitle {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+    margin-bottom: 0.7rem;
+    /* letter-spacing: -1px; */
+  }
+
+  & .about-description {
     font-size: 1.6rem;
     line-height: 2.6rem;
     margin-bottom: 1.6rem;
@@ -23,13 +33,18 @@ export default function AboutPage({}: Props) {
   // output
   return (
     <StyledAboutPage className="container">
-      <h1 className="title">About Me</h1>
-      <p className="description">
+      <h1 className="about-title">About Me</h1>
+      <h2 className="about-subtitle">Embarking on the IT Pathway</h2>
+      <p className="about-description">
         Hello! I'm Juan Gomez, a dedicated Software Engineer with an unwavering
         commitment to web development and an enduring spirit for learning. My
         journey is a testament to the belief that our experiences, however
         varied, shape our expertise and vision.
       </p>
+
+      <h2 className="about-subtitle">
+        Academic Pursuits: Laying the Groundwork
+      </h2>
       <p className="description">
         My foray into the realm of Information Technology began back in 2010
         when I enrolled in the online program at Phoenix University. Over three
@@ -38,6 +53,8 @@ export default function AboutPage({}: Props) {
         financial constraints nudged me to take a pause in the third year, the
         fire to excel in this domain was ignited and remained undiminished.
       </p>
+
+      <h2 className="about-subtitle">Trust and Responsibility at GDM</h2>
       <p className="description">
         During these academic pursuits, I also held the significant
         responsibility of ensuring the cleanliness and upkeep of GDM, a bustling
@@ -48,6 +65,10 @@ export default function AboutPage({}: Props) {
         privilege of such trust made me realize the profound importance of
         responsibility, no matter the nature of the job.
       </p>
+
+      <h2 className="about-subtitle">
+        Guarding and Leading: My Tenure at Securitas
+      </h2>
       <p className="description">
         Following this, from 2003 to 2011, I ventured into the security sector.
         Working my way up, I concluded this chapter as a Supervisor at Seton
@@ -55,17 +76,25 @@ export default function AboutPage({}: Props) {
         leadership, diligence, and an attention to detail—skills I find
         invaluable as a developer.
       </p>
+
+      <h2 className="about-subtitle">
+        Empathy and Communication: The ESL Chapter
+      </h2>
       <p className="description">
         My 12-year journey as an ESL instructor in Brazil then honed my ability
         to communicate effectively and empathize—traits that are crucial when
         collaborating on complex projects or explaining intricate code.
       </p>
+
+      <h2 className="about-subtitle">Diving Deep into Web Development</h2>
       <p className="description">
         Two years ago, I embarked on a dedicated quest into web development,
         committing no less than 6 hours daily to master a diverse array of
         technologies such as Python, JavaScript, and multiple front-end
         frameworks.
       </p>
+
+      <h2 className="about-subtitle">Embracing the Future of Software</h2>
       <p className="description">
         Each chapter of my life, from safeguarding precious merchandise,
         imparting knowledge, to crafting intricate code, has been an invaluable
@@ -73,6 +102,8 @@ export default function AboutPage({}: Props) {
         perspective, resilience, and a multifaceted skill set that I bring to
         the world of software engineering.
       </p>
+
+      <h2 className="about-subtitle"></h2>
       <p className="description">
         Now, as I immerse myself deeper into the software community, the vast
         canvas of possibilities exhilarates me. I am keen to collaborate,

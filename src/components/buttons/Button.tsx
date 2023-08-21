@@ -26,7 +26,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
 // };
 
 //* COMPONENT: Button
-export default function Button({ children }: Props) {
+export default function Button({ children, ...rest }: Props) {
   // output
-  return <StyledButton>{children}</StyledButton>;
+  return <StyledButton {...rest}>{children}</StyledButton>;
 }
