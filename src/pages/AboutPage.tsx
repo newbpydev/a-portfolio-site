@@ -68,6 +68,7 @@ const StyledAboutPage = styled.section`
 
     @media (min-width: 48em) {
       flex-direction: row;
+      margin-bottom: 5.2rem;
 
       &:nth-of-type(odd) {
         flex-direction: row-reverse;
@@ -82,6 +83,7 @@ const StyledAboutPage = styled.section`
       }
     }
     @media (min-width: 90em) {
+      margin-bottom: 7.2rem;
     }
 
     & .about-text-wrapper {
@@ -89,16 +91,29 @@ const StyledAboutPage = styled.section`
       }
       @media (min-width: 90em) {
       }
-      & .about-subtitle {
+      & .about-section-title {
         color: white;
-        font-size: 2.4rem;
         font-weight: 700;
-        line-height: 3.2rem;
+        /* font-size: 2.4rem;
+        line-height: 3.2rem; */
         margin-bottom: 0.7rem;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: -1px;
         /* letter-spacing: -1px; */
         @media (min-width: 48em) {
+          /* font-size: 3.2rem;
+          line-height: 4rem;
+          letter-spacing: -1px; */
+          margin-bottom: 1.4rem;
+          font-size: 4.8rem;
+          line-height: 5.6rem;
+          letter-spacing: -1.5px;
         }
         @media (min-width: 90em) {
+          font-size: 4.8rem;
+          line-height: 5.6rem;
+          letter-spacing: -1.5px;
         }
       }
 
@@ -107,6 +122,8 @@ const StyledAboutPage = styled.section`
         line-height: 2.6rem;
         margin-bottom: 1.6rem;
         @media (min-width: 48em) {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
         }
         @media (min-width: 90em) {
         }
@@ -140,7 +157,7 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle">Embarking on the IT Pathway</h2>
+          <h2 className="about-section-title">Embarking on the IT Pathway</h2>
           <p className="about-description">
             Hello! I'm Juan Gomez, a dedicated Software Engineer with an
             unwavering commitment to web development and an enduring spirit for
@@ -162,7 +179,7 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle">
+          <h2 className="about-section-title">
             Academic Pursuits: Laying the Groundwork
           </h2>
           <p className="description">
@@ -189,7 +206,9 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle">Trust and Responsibility at GDM</h2>
+          <h2 className="about-section-title">
+            Trust and Responsibility at GDM
+          </h2>
           <p className="description">
             During these academic pursuits, I also held the significant
             responsibility of ensuring the cleanliness and upkeep of GDM, a
@@ -216,7 +235,7 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle">
+          <h2 className="about-section-title">
             Guarding and Leading: My Tenure at Securitas
           </h2>
           <p className="description">
@@ -241,7 +260,7 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle">
+          <h2 className="about-section-title">
             Empathy and Communication: The ESL Chapter
           </h2>
           <p className="description">
@@ -265,7 +284,9 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle">Diving Deep into Web Development</h2>
+          <h2 className="about-section-title">
+            Diving Deep into Web Development
+          </h2>
           <p className="description">
             Two years ago, I embarked on a dedicated quest into web development,
             committing no less than 6 hours daily to master a diverse array of
@@ -287,7 +308,9 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle">Embracing the Future of Software</h2>
+          <h2 className="about-section-title">
+            Embracing the Future of Software
+          </h2>
           <p className="description">
             Each chapter of my life, from safeguarding precious merchandise,
             imparting knowledge, to crafting intricate code, has been an
@@ -310,7 +333,7 @@ export default function AboutPage({}: Props) {
 
       <section className="about-section">
         <div className="about-text-wrapper">
-          <h2 className="about-subtitle"></h2>
+          <h2 className="about-section-title"></h2>
           <p className="description">
             Now, as I immerse myself deeper into the software community, the
             vast canvas of possibilities exhilarates me. I am keen to
