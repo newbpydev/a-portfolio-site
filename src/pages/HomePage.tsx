@@ -129,6 +129,7 @@ const HeroSection = styled.section`
 
     @media (min-width: 48em) {
       order: 1;
+      /* width: 35rem; */
     }
     @media (min-width: 90em) {
       height: 72rem;
@@ -150,7 +151,8 @@ const StyledHeroImg = styled.img`
     top: -19rem;
     right: -3rem;
     width: 32.2rem;
-    height: 60rem;
+    /* width: 35rem; */
+    min-height: 60rem;
     z-index: -20;
   }
   @media (min-width: 90em) {
