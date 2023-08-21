@@ -136,7 +136,7 @@ const StyledAboutPage = styled.section`
       /* height: auto; */
       margin-bottom: 2.4rem;
       @media (min-width: 48em) {
-        width: 30rem;
+        min-width: 24rem;
         margin-bottom: 0rem;
         /* margin-left: 2rem; */
       }
