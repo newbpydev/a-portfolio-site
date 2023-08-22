@@ -28,8 +28,6 @@ import img007Desktop from "../assets/images/about-page/about-007-desktop.webp";
 import img007Tablet from "../assets/images/about-page/about-007-tablet.webp";
 import img007Mobile from "../assets/images/about-page/about-007-mobile.webp";
 
-type Props = {};
-
 const StyledAboutPage = styled.section`
   @media (min-width: 48em) {
   }
@@ -149,7 +147,7 @@ const StyledAboutPage = styled.section`
 `;
 
 //* COMPONENT: AboutPage
-export default function AboutPage({}: Props) {
+export default function AboutPage() {
   // output
   return (
     <StyledAboutPage className="container">
@@ -198,7 +196,7 @@ export default function AboutPage({}: Props) {
           <source media="(min-width: 48em)" srcSet={img002Tablet} />
           <img
             src={img002Mobile}
-            alt="illustration of a man looking ahead facing his challenges on a mountain"
+            alt="Virtual classroom with computer screens showing Phoenix University logo and background network nodes symbolizing IT studies."
             className="about-img"
           />
         </picture>
@@ -227,7 +225,7 @@ export default function AboutPage({}: Props) {
           <source media="(min-width: 48em)" srcSet={img003Tablet} />
           <img
             src={img003Mobile}
-            alt="illustration of a man looking ahead facing his challenges on a mountain"
+            alt="Exterior of GDM factory with Juan Gomez holding a key, shimmering glimpses of gold and diamonds in the backdrop, signifying trust and responsibility."
             className="about-img"
           />
         </picture>
@@ -252,7 +250,7 @@ export default function AboutPage({}: Props) {
           <source media="(min-width: 48em)" srcSet={img004Tablet} />
           <img
             src={img004Mobile}
-            alt="illustration of a man looking ahead facing his challenges on a mountain"
+            alt="Seton Hall University grounds with Juan Gomez in a supervisory uniform leading a team of security personnel."
             className="about-img"
           />
         </picture>
@@ -276,7 +274,7 @@ export default function AboutPage({}: Props) {
           <source media="(min-width: 48em)" srcSet={img005Tablet} />
           <img
             src={img005Mobile}
-            alt="illustration of a man looking ahead facing his challenges on a mountain"
+            alt="Brazilian classroom with Juan Gomez instructing diverse students, chalkboard displaying English words and Brazilian symbols."
             className="about-img"
           />
         </picture>
@@ -300,7 +298,7 @@ export default function AboutPage({}: Props) {
           <source media="(min-width: 48em)" srcSet={img006Tablet} />
           <img
             src={img006Mobile}
-            alt="illustration of a man looking ahead facing his challenges on a mountain"
+            alt="An image of desk, with a monitor, keyboard and mouse on it. The computer is on, the monitor is on a coding app."
             className="about-img"
           />
         </picture>
@@ -325,7 +323,7 @@ export default function AboutPage({}: Props) {
           <source media="(min-width: 48em)" srcSet={img007Tablet} />
           <img
             src={img007Mobile}
-            alt="illustration of a man looking ahead facing his challenges on a mountain"
+            alt="Convergence of a key, security badge, chalkboard, and code lines leading to a digital horizon, symbolizing [Your Name]'s journey in software engineering."
             className="about-img"
           />
         </picture>
