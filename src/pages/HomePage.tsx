@@ -281,15 +281,15 @@ export default function HomePage() {
           <picture>
             <source
               media="(min-width: 90em)"
-              srcSet="images/profile/image-profile-desktop.webp"
+              srcSet="images/profile/img-profile-desktop.webp"
             />
             <source
               media="(min-width: 48em)"
-              srcSet="images/profile/image-profile-tablet.webp"
+              srcSet="images/profile/img-profile-tablet.webp"
             />
 
             <StyledHeroImg
-              src="images/profile/image-profile-mobile.webp"
+              src="images/profile/img-profile-mobile.webp"
               title="A portrait of Juan Gomez"
               alt="A portrait image of Juan Gomez"
             />
